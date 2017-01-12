@@ -1,6 +1,6 @@
 package com.adoit.sdk.auth.signature;
 
-import com.baiwang.cloud.auth.Constants;
+import com.adoit.sdk.common.StringUtils;
 
 import java.security.InvalidParameterException;
 
@@ -8,7 +8,7 @@ public class SignatureAlgorithms {
 
 
     public static SignatureAlgorithm create(SignatureMethod signatureMethod) {
-        return create(signatureMethod, Constants.Charset.UTF_8);
+        return create(signatureMethod, StringUtils.DEFAULT_ENCODING);
     }
 
     public static SignatureAlgorithm create(SignatureMethod signatureMethod, String encodeType) {

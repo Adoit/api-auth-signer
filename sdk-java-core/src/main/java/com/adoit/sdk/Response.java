@@ -1,4 +1,4 @@
-package com.adoit.sdk.http;
+package com.adoit.sdk;
 
 import org.apache.http.HttpResponse;
 

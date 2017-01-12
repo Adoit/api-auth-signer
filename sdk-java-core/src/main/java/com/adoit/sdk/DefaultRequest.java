@@ -1,4 +1,6 @@
-package com.adoit.sdk.http;
+package com.adoit.sdk;
+
+import com.adoit.sdk.http.HttpMethod;
 
 import java.io.InputStream;
 import java.net.URI;
