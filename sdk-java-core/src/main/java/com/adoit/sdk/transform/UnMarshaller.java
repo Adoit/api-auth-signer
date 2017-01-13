@@ -1,5 +1,5 @@
 package com.adoit.sdk.transform;
 
-public interface UnMarshaller<T, R> {
-    T unMarshall(R in);
+public interface UnMarshaller<Output, Input> {
+    Output unMarshall(Input in);
 }

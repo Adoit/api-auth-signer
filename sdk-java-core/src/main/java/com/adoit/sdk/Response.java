@@ -1,6 +1,7 @@
 package com.adoit.sdk;
 
-import org.apache.http.HttpResponse;
+
+import com.adoit.sdk.http.HttpResponse;
 
 public class Response<T> {
     private T serviceResponse;

@@ -1,5 +1,5 @@
 package com.adoit.sdk.transform;
 
-public interface Marshaller<T, R> {
-    T marshall(R in);
+public interface Marshaller<Output, Input> {
+    Output marshall(Input in);
 }
