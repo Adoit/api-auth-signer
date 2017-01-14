@@ -1,30 +1,24 @@
 package com.adoit.sdk;
 
-import com.adoit.sdk.http.HttpMethod;
-import com.adoit.sdk.http.ImmutableRequest;
+import com.adoit.sdk.http.HttpRequest;
 
-import java.io.InputStream;
-import java.net.URI;
-import java.util.List;
-import java.util.Map;
+public class Request<T> {
+    private T serviceRequest;
+    private HttpRequest httpRequest;
 
-public interface Request<T> extends ImmutableRequest<T> {
+    public T getServiceRequest() {
+        return serviceRequest;
+    }
 
-    void addHeader(String name, String value);
+    public void setServiceRequest(T serviceRequest) {
+        this.serviceRequest = serviceRequest;
+    }
 
-    void addParameter(String name, List<String> value);
+    public HttpRequest getHttpRequest() {
+        return httpRequest;
+    }
 
-    void setContent(InputStream content);
-
-    void setHeaders(Map<String, String> headers);
-
-    void setParameters(Map<String, String> parameters);
-
-    void setResourcePath(String resourcePath);
-
-    void setEndpoint(URI endpoint);
-
-    void setHttpMethod(HttpMethod httpmethod);
-
-    Request<T> withParameter(String name, String value);
+    public void setHttpRequest(HttpRequest httpRequest) {
+        this.httpRequest = httpRequest;
+    }
 }

@@ -2,7 +2,9 @@ package com.adoit.sdk.http;
 
 import com.adoit.sdk.ClientConfiguration;
 import com.adoit.sdk.Request;
+import com.adoit.sdk.RequestHandler;
 import com.adoit.sdk.Response;
+import com.adoit.sdk.ResponseHandler;
 import com.adoit.sdk.retry.RetryPolicy;
 
 public class HttpClient {
@@ -15,6 +17,8 @@ public class HttpClient {
     }
 
     public <Output, Input> Response<Output> execute(Request<Input> request,
+                                                    RequestHandler<Input> requestHandlers,
+                                                    ResponseHandler<Output> responseHandlers,
                                                     ExecutionContext executionContext) {
         return null;
     }
