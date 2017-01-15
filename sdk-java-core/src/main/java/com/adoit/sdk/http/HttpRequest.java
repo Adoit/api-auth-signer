@@ -9,13 +9,15 @@ public interface HttpRequest extends ImmutableRequest {
 
     void addHeader(String name, String value);
 
-    void addParameter(String name, List<String> value);
+    void addParameters(String name, List<String> values);
+
+    void addParameter(String name, String value);
 
     void setContent(InputStream content);
 
     void setHeaders(Map<String, String> headers);
 
-    void setParameters(Map<String, String> parameters);
+    void setParameters(Map<String, List<String>> parameters);
 
     void setResourcePath(String resourcePath);
 
