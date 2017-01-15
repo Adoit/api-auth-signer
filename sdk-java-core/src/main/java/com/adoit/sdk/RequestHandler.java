@@ -1,5 +1,5 @@
 package com.adoit.sdk;
 
-public interface RequestHandler<T> {
-    void handle(Request<T> request);
+public interface RequestHandler {
+    void handle(Request<?> request);
 }
